@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files %28x86%29\MS123\Wealth-Lab Developer 6\WealthLabDev.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>C:\Users\Sergey Abramchuk\Dropbox\Проекты\Разработка ПО\Real-Time Trading Ltd\WLD Solutions\References\</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files %28x86%29\MS123\Wealth-Lab Developer 6\WealthLabDev.exe</StartProgram>
+  </PropertyGroup>
+</Project>

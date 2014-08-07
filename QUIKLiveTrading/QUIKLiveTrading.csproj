@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6039AA2B-A2DD-4C9C-8798-8E4C196D0B37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WLDSolutions.QUIKLiveTrading</RootNamespace>
+    <AssemblyName>QUIKLiveTrading</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\..\..\..\..\..\..\Program Files %28x86%29\MS123\Wealth-Lab Developer 6\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\..\..\..\..\..\..\Program Files %28x86%29\MS123\Wealth-Lab Developer 6\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fidelity.Components, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Vendors\Fidelity.Components.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LiveTradingManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Vendors\LiveTradingManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Vendors\log4net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NDde">
+      <HintPath>..\Vendors\NDde.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WealthLab, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Vendors\WealthLab.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WealthLab.DataProviders.MarketManager, Version=1.2.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Vendors\WealthLab.DataProviders.MarketManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WealthLab.Extensions.Attribute, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Vendors\WealthLab.Extensions.Attribute.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\IQUIKDDEDataProvider.cs" />
+    <Compile Include="Abstract\IQUIKOrderProvider.cs" />
+    <Compile Include="Abstract\IQUIKStaticProvider.cs" />
+    <Compile Include="Abstract\IQUIKStreamingProvider.cs" />
+    <Compile Include="Broker Provider\QUIKBrokerProvider.cs" />
+    <Compile Include="Data Provider\QUIKStaticDataProvider.cs" />
+    <Compile Include="Data Provider\QUIKStreamingDataProvider.cs" />
+    <Compile Include="Data Provider\WizardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Data Provider\WizardPage.designer.cs">
+      <DependentUpon>WizardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DDE Server\QUIKDDEServer.cs" />
+    <Compile Include="Dispatcher\QUIKDDEDataProvider.cs" />
+    <Compile Include="Dispatcher\QUIKOrderProvider.cs" />
+    <Compile Include="Helpers\BinaryHelper.cs" />
+    <Compile Include="Helpers\Candle.cs" />
+    <Compile Include="Helpers\ConnectionStatus.cs" />
+    <Compile Include="Helpers\ExtendedSymbolDescription.cs" />
+    <Compile Include="Helpers\OrderState.cs" />
+    <Compile Include="Helpers\OrderStatus.cs" />
+    <Compile Include="Helpers\PositionComparer.cs" />
+    <Compile Include="Helpers\QUIKAccount.cs" />
+    <Compile Include="Helpers\StopOrderResult.cs" />
+    <Compile Include="Helpers\StopOrderStatus.cs" />
+    <Compile Include="Helpers\Trade.cs" />
+    <Compile Include="Helpers\QUIKLiveTradingDescription.cs" />
+    <Compile Include="Helpers\QUIKMarketManagerInfo.cs" />
+    <Compile Include="Helpers\SymbolDescription.cs" />
+    <Compile Include="Helpers\TradeStatus.cs" />
+    <Compile Include="Helpers\TransactionDescription.cs" />
+    <Compile Include="Helpers\TransactionState.cs" />
+    <Compile Include="Helpers\TransactionStatus.cs" />
+    <Compile Include="Helpers\ExtendedTransactionStatus.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dispatcher\QUIKDispatcher.cs" />
+    <Compile Include="Dispatcher\QUIKDataProvider.cs" />
+    <Compile Include="Settings\QUIKGeneralSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\QUIKGeneralSettings.Designer.cs">
+      <DependentUpon>QUIKGeneralSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\QUIKDataImportSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\QUIKDataImportSettings.Designer.cs">
+      <DependentUpon>QUIKDataImportSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\QUIKSettingsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\QUIKSettingsPanel.Designer.cs">
+      <DependentUpon>QUIKSettingsPanel.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data Provider\WizardPage.resx">
+      <DependentUpon>WizardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\QUIKDataImportSettings.resx">
+      <DependentUpon>QUIKDataImportSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\QUIKGeneralSettings.resx">
+      <DependentUpon>QUIKGeneralSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\QUIKSettingsPanel.resx">
+      <DependentUpon>QUIKSettingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\QUIK[16x16].png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
